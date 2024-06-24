@@ -100,3 +100,12 @@ function startOver() {
   gamePattern = [];
   started = false;
 }
+
+//Mobile start script
+$(document).ready(function() {
+  if(/Mobi|Android/i.test(navigator.userAgent)) {
+    $("#level-title").text("Level"+level);
+    started = true;
+    nextSequence();
+  }
+});

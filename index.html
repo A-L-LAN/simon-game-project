@@ -27,5 +27,14 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="game.js" charset="utf-8"></script>
+    <script>
+      $(document).ready(function(){
+        if(/Mobi|Android/i.test(navigator.userAgent)) {
+          $("#level-title").text("Level" + level);
+          started = true;
+          nextSequence(); 
+        }
+      });
+    </script>
   </body>
 </html>
